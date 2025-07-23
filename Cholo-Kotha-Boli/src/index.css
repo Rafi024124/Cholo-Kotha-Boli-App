@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+:root {
+  --bg-color: white;
+  --text-color: #111;
+  --primary-color: #22c55e; /* emerald-500 */
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #1f2937; /* gray-800 */
+  --text-color: #eee;
+  --primary-color: #22d3ee; /* cyan-400 */
+}
+
+/* Cupcake theme */
+[data-theme="cupcake"] {
+  --bg-color: #f0e9ff;
+  --text-color: #4b2995;
+  --primary-color: #a855f7;
+}
+
+/* Forest theme */
+[data-theme="forest"] {
+  --bg-color: #022c22;
+  --text-color: #a3f7bf;
+  --primary-color: #16a34a;
+}
+
+/* Dracula theme */
+[data-theme="dracula"] {
+  --bg-color: #282a36;
+  --text-color: #f8f8f2;
+  --primary-color: #bd93f9;
+}
+
+/* Synthwave theme */
+[data-theme="synthwave"] {
+  --bg-color: #2d033b;
+  --text-color: #f72585;
+  --primary-color: #720026;
+}
+
+body, #root, .app-container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Example for buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
