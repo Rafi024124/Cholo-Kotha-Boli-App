@@ -1,0 +1,13 @@
+{
+  "name": "cholo-kotha-boli-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix Cholo-Kotha-Boli-Backend && npm install --prefix Cholo-Kotha-Boli && npm run build --prefix Cholo-Kotha-Boli ",
+    "start": "npm run start --prefix Cholo-Kotha-Boli-Backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
