@@ -19,12 +19,25 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.json({ limit: '10mb' }));
 app.use(cookieParser());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://cholo-kotha-boli-app.onrender.com"
+];
+
 app.use(cors({
-    origin: ["http://localhost:5173",
-        "https://cholo-kotha-boli-app.onrender.com"
-    ],
-    credentials: true
+  origin: function(origin, callback) {
+    // allow requests with no origin (like curl, postman, mobile apps)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true
 }));
+
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
 
