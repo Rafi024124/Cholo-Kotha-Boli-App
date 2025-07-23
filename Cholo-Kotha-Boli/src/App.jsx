@@ -8,7 +8,7 @@ import SettingsPage from "./pages/SettingsPage";
 import './index.css';  // or whatever your CSS file is named
 
 import { useAuthStore } from "./store/useAuthStore";
-import ProfilePage from "./pages/ProfilePage.Jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 import { useThemeStore } from "./store/useThemeStore";
