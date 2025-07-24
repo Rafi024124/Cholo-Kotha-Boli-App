@@ -37,6 +37,11 @@ app.use(cors({
   },
   credentials: true
 }));
+// Inside your Express setup (e.g., index.js or app.js)
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
@@ -51,6 +56,7 @@ app.get(/(.*)/, (req, res) => {
 
 console.log("PORT:", PORT);
 console.log("MONGODB_URI:", process.env.MONGODB_URI ? "Loaded" : "Missing");
+
 
 server.listen(PORT, () => {
     console.log("server is running on port:", PORT);
