@@ -1,5 +1,5 @@
 # 🌟 Cholo-Kotha-Boli – Real-Time Chat Application
-![Cholo-Kotha-Boli Screenshot](./assets/screenshot1.jpg)
+![Cholo-Kotha-Boli Screenshot](/screenshot1.jpg)
 
 Cholo-Kotha-Boli enables real-time conversations with a focus on smooth, engaging user interactions. It allows participants to connect with others, view online statuses, and engage in one-on-one conversations. Participants can exchange both text messages and images in a clean, easy-to-use interface.
 
